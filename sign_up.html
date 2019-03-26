@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up Portal</title>
+	<link rel="stylesheet" type="text/css" href="sign_up.css">
+	<style>
+		#msg
+		{
+			visibility: hidden;
+			min-width: 100px;
+			background-color: yellow;
+			color: #000;
+			text-align: center;
+			border-radius: 2px;
+			padding: 16px;
+			position: fixed;
+			z-index: 1;
+			right: 35%;
+			top:30px;
+			font-size: 17px;
+			margin-right: 30px;
+			
+		}
+
+		#msg.show
+		{
+			visibility: visible;
+			-webkit-animation: fadein 0.5s,fadeout 0.5s 2.5s;
+			animation: fadein 0.5s,fadeout 0.5s 2.5s;
+		}
+
+
+		@-webkit-keyframes fadein
+		{
+			from(top:0;opacity: 0;)
+			to(top:30px;opacity:1;)
+		}
+
+		@keyframes fadein
+		{
+			from(top:0;opacity: 0;)
+			to(top:30px;opacity:1;)
+		}
+
+
+		@-webkit-keyframes fadeout
+		{
+			from(top:30px;opacity: 1;)
+			to(top:0;opacity:0;)
+		}
+		
+		@keyframes fadeout
+		{
+			from(top:30px;opacity: 1;)
+			to(top:0;opacity:0;)
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="signup">
+		<form>
+			<h2>Sign Up</h2>
+			<input type="text" name="fname" placeholder="First Name"><br><br>
+			<input type="text" name="fname" placeholder="Second Name"><br><br>
+			<input type="password" name="pass" placeholder="Password"> <br><br>
+			<input type="password" name="pass" placeholder=" Confirm Password"> <br><br>
+			<input type="text" name="Email" placeholder="Email Address"> <br><br>
+			<input type="button" value="Sign Up" onClick="myfunction()"><br><br>
+				<div id="msg">
+					Congratulations you have signed up successfully!!!!
+				</div>
+		</form>
+		<script src="sign_up.js"></script>
+				Already have account?<a href="login_page.html" style="text-decoration: none; font-family:'Play',sans-serif; color: yellow">&nbsp;Log In</a>
+		
+	</div>
+
+</body>
+</html>
